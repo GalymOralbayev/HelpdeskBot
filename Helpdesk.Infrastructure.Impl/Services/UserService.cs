@@ -14,11 +14,26 @@ public class UserService : IUserService {
         _botUserRepository = botUserRepository;
     }
 
-    public async Task<BotUser> TryCreateUser(string userName, CancellationToken ct) {
+    public async Task<BotUser?> TryGetOrInsertUser(string? userName, CancellationToken ct) {
+        if (string.IsNullOrEmpty(userName)) {
+            return null;
+        }
         var existingUser = await _botUserRepository.GetByUserName(userName, ct);
         if (existingUser is not null) return existingUser;
         
         var user = await _botUserRepository.Insert(new BotUser(userName, null), ct);
+        return user;
+    }
+    
+    public async Task<BotUser?> UpdateUserEmail(string userName, string? emailAddress, CancellationToken ct) {
+        if (string.IsNullOrEmpty(emailAddress)) {
+            return null;
+        }
+        var existingUser = await _botUserRepository.GetByUserName(userName, ct);
+        if (existingUser is null) return null;
+
+        existingUser.SetEmail(emailAddress);
+        var user = await _botUserRepository.Update(existingUser, ct);
         return user;
     }
 

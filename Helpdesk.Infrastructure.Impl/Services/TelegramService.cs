@@ -19,13 +19,14 @@ namespace Helpdesk.Infrastructure.Impl.Services;
 public class TelegramService : ITelegramService {
     private readonly ILogger<TelegramService> _logger;
     private readonly TelegramBotClient _botClient;
-    private readonly IServiceScopeFactory _scopeFactory;
     private readonly TelegramOptions _options;
     private readonly CancellationTokenSource _cts = new();
+    private readonly EmailButtonHandlerService emailButtonHandlerService;
+    private Dictionary<long, string?> _chatStates = new Dictionary<long, string?>();
 
-    public TelegramService(ILogger<TelegramService> logger, IOptions<TelegramOptions> options, IServiceScopeFactory scopeFactory) {
+    public TelegramService(ILogger<TelegramService> logger, IOptions<TelegramOptions> options, EmailButtonHandlerService emailButtonHandlerService) {
         _logger = logger;
-        _scopeFactory = scopeFactory;
+        this.emailButtonHandlerService = emailButtonHandlerService;
         _options = options.Value;
         _botClient = new TelegramBotClient(_options.BotToken);
     }
@@ -99,7 +100,7 @@ public class TelegramService : ITelegramService {
         try {
             // Специфичные обработчики разных типов сообщений
             Result messageHandlingResult = message.Type switch {
-                MessageType.Text => await HandleTextMessageAsync(message, cancellationToken),
+                MessageType.Text => await HandleTextMessageAsync(botClient, message, cancellationToken),
                 _ => await HandleNotSupportedMessageAsync(message)
             };
 
@@ -119,28 +120,32 @@ public class TelegramService : ITelegramService {
     }
 
     /// <summary> Обработчик текстовых сообщений </summary>
-    private async Task<Result> HandleTextMessageAsync(Message message, CancellationToken ct) {
-        if (message.From?.Username != null) {
-            await TryAddUser(message.From.Username, ct);
-        }
-
-        switch (message.Text) {
-            case Buttons.Help: await HelpButtonHandler(ct); break;
-            case Buttons.SendEMail: await SendEMailButtonHandler(ct); break;
+    private async Task<Result> HandleTextMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken ct) {
+        _chatStates.TryAdd(message.Chat.Id, null);
+        var switchConstText = _chatStates[message.Chat.Id] ?? message.Text;
+        switch (switchConstText) {
+            case Buttons.Help: 
+                await SendMessageAsync(message.Chat.Id, ConstantStings.HelpText); break;
+            case Buttons.SendEMail: 
+                _chatStates[message.Chat.Id] = Buttons.SendEMail;
+                var isDone = await emailButtonHandlerService.HandleMessageAsync(botClient, message, ct);
+                if (isDone) {
+                    _chatStates[message.Chat.Id] = null;
+                    await SendMessageAsync(message.Chat.Id, "Ваше письмо отправлено! \nВыберите новую опцию:");
+                }
+                return Result.Success();
             case Buttons.PhoneReferences: await PhoneReferencesButtonHandler(ct); break;
             case Buttons.GetInstructions: await GetInstructionsButtonHandler(ct); break;
-            case Buttons.HelperContacts: await HelperContactsButtonHandler(ct); break;
-            case Buttons.UniversityMap: await UniversityMapButtonHandler(ct); break;
+            case Buttons.HelperContacts: await SendMessageAsync(message.Chat.Id, ConstantStings.TechnicalSupportContacts); break;
+            case Buttons.UniversityMap: await SendMessageAsync(message.Chat.Id, ConstantStings.MapLink); break;
             case Buttons.Admin: await AdminButtonHandler(ct); break;
         }
-        
         
         await SendMessageAsync(message.Chat.Id);
         _logger.LogDebug("Text message {messageId} received.", message.MessageId);
 
         return Result.Success();
     }
-
 
     /// <summary> Обработчик сообщений, которые не поддерживаются </summary>
     private async Task<Result> HandleNotSupportedMessageAsync(Message message) {
@@ -154,39 +159,27 @@ public class TelegramService : ITelegramService {
         return Task.CompletedTask;
     }
 
-    private async Task<BotUser> TryAddUser(string username, CancellationToken ct) {
-        using var scope = _scopeFactory.CreateScope();
-        var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
-        var user = await userService.TryCreateUser(username, ct);
-        
-        return user;
-    }
-
     private Task HelpButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
-    }
-
-    private Task SendEMailButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     private Task PhoneReferencesButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     private Task GetInstructionsButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     private Task HelperContactsButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     private Task UniversityMapButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     private Task AdminButtonHandler(CancellationToken ct) {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 }

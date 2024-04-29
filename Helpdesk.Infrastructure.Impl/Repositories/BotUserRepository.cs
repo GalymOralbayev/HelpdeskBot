@@ -30,6 +30,11 @@ public class BotUserRepository : IBotUserRepository{
         await _context.SaveChangesAsync(ct);
         return botUser;
     }
+    public async Task<BotUser> Update(BotUser botUser, CancellationToken ct) {
+        _context.Update(botUser);
+        await _context.SaveChangesAsync(ct);
+        return botUser;
+    }
 
     public async Task<Guid> Delete(BotUser botUser, CancellationToken ct) {
         _context.Remove(botUser);

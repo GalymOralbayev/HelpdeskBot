@@ -2,6 +2,8 @@ using Helpdesk.Application.Services;
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
+using Helpdesk.Infrastructure.Impl.Options;
+using Microsoft.Extensions.Options;
 
 namespace Helpdesk.Infrastructure.Impl.Services;
 
@@ -13,31 +15,29 @@ public class EmailService : IEmailService
     private readonly string _senderEmail;
     private readonly string _password;
 
-    public EmailService(IConfiguration configuration)
+    public EmailService(IOptions<EmailOptions> options)
     {
-        var emailConfig = configuration.GetSection("EmailSettings");
-        _smtpServer = emailConfig["MailServer"];
-        _smtpPort = int.Parse(emailConfig["MailPort"]);
-        _senderName = emailConfig["SenderName"];
-        _senderEmail = emailConfig["Sender"];
-        _password = emailConfig["Password"];
+        _smtpServer = options.Value.MailServer;
+        _smtpPort = options.Value.MailPort;
+        _senderName = options.Value.SenderName;
+        _senderEmail = options.Value.Sender;
+        _password = options.Value.Password;
     }
 
     public void SendEmail(string recipientEmail, string subject, string message) {
+        var fromAddress = new MailAddress(_senderEmail, _senderName);
+        var toAddress = new MailAddress(recipientEmail);
         using var client = new SmtpClient(_smtpServer, _smtpPort);
+        client.EnableSsl = true;
+        client.DeliveryMethod = SmtpDeliveryMethod.Network;
         client.UseDefaultCredentials = false;
         client.Credentials = new NetworkCredential(_senderEmail, _password);
-        client.EnableSsl = true;
 
-        var mailMessage = new MailMessage
+        using var mailMessage = new MailMessage(fromAddress, toAddress)
         {
-            From = new MailAddress(_senderEmail, _senderName),
             Subject = subject,
-            Body = message,
-            IsBodyHtml = true
+            Body = message
         };
-        mailMessage.To.Add(recipientEmail);
-
         client.Send(mailMessage);
     }
 }

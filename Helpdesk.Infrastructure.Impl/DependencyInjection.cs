@@ -10,6 +10,7 @@ namespace Helpdesk.Infrastructure.Impl;
 public static class DependencyInjection {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration) {
         services.AddSingleton<TelegramService>();
+        services.AddSingleton<EmailButtonHandlerService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IBotUserRepository, BotUserRepository>();
         services.AddScoped<IEmailService, EmailService>();

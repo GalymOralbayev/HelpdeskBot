@@ -15,4 +15,7 @@ public class BotUser : IEntity {
         Email = email;
     }
 
+    public virtual void SetEmail(string email) {
+        Email = email;
+    }
 }
