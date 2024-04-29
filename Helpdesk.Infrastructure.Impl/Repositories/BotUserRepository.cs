@@ -15,12 +15,6 @@ public class BotUserRepository : IBotUserRepository{
         _set = dbContext.Set<BotUser>();
     }
         
-    public async Task<IList<BotUser?>> Get(int limit, CancellationToken ct) {
-        return await _set
-            .Take(limit)
-            .ToListAsync(ct);
-    }
-        
     public async Task<BotUser?> GetByUserName(string userName, CancellationToken ct) {
         return await _set.SingleOrDefaultAsync(x => x != null && x.TgUserName == userName, ct);
     }
@@ -34,11 +28,5 @@ public class BotUserRepository : IBotUserRepository{
         _context.Update(botUser);
         await _context.SaveChangesAsync(ct);
         return botUser;
-    }
-
-    public async Task<Guid> Delete(BotUser botUser, CancellationToken ct) {
-        _context.Remove(botUser);
-        await _context.SaveChangesAsync(ct);
-        return botUser.Id;
     }
 }

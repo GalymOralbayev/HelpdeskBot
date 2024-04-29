@@ -1,0 +1,1175 @@
+[
+  {
+    "Position": "Ресепшн",
+    "Department": "Руководство",
+    "Internal": 2000,
+    "City": 645700
+  },
+  {
+    "Position": "Приемная ректора (ассистент ректора)",
+    "Department": "Руководство",
+    "Internal": 2160,
+    "City": 645715
+  },
+  {
+    "Position": "Приемная проректора (ассистент проректоров)",
+    "Department": "Руководство",
+    "Internal": 2162,
+    "City": 645732
+  },
+  {
+    "Position": "Приемная пророектора (ассистент проректоров)",
+    "Department": "Руководство",
+    "FullName": "Манат Несібелі Бахытқызы",
+    "Internal": 2008,
+    "City": 645726,
+    "Email": "Nessibeli.manat@astanait.edu.kz"
+  },
+  {
+    "Position": "Первый проректор",
+    "Department": "Руководство",
+    "FullName": "Омирбаев Серик Мауленович ",
+    "Internal": 2001,
+    "City": 645722,
+    "Email": "Serik.Omirbayev@astanait.edu.kz"
+  },
+  {
+    "Position": "Проректор по цифровизации и международному сотрудничеству",
+    "Department": "Руководство",
+    "FullName": "Лебедев Данил Владимирович",
+    "Internal": 2100,
+    "City": 645701,
+    "Email": "danil.lebedev@astanait.edu.kz"
+  },
+  {
+    "Position": "Проректор по науке и инновациям",
+    "Department": "Руководство",
+    "FullName": "Белощицкий Андрей Александрович ",
+    "Internal": 2007,
+    "City": 645724,
+    "Email": "Andrii.Biloshchytskyi@astanait.edu.kz"
+  },
+  {
+    "Position": "Финансовый директор",
+    "Department": "Руководство",
+    "FullName": "Арын Абай Мухтарулы",
+    "Internal": 2005,
+    "City": 645702,
+    "Email": "abay.aryn@astanait.edu.kz"
+  },
+  {
+    "Position": "Главный бухгалтер",
+    "Department": "Руководство",
+    "FullName": "Жулаева Айгуль Еспосыновна",
+    "Internal": 2006,
+    "City": 645705,
+    "Email": "a.zhulayeva@astanait.edu.kz"
+  },
+  {
+    "Position": "Проректор по воспитательной работе",
+    "Department": "Руководство",
+    "FullName": "Кумалаков Болатжан Арменович ",
+    "Internal": 2013,
+    "Email": "bolatzhan.kumalakov@astanait.edu.kz"
+  },
+  {
+    "Department": "Руководство",
+    "Position": "Фонд",
+    "FullName": "Фонд",
+    "Internal": 2014,
+    "City": 645703
+  },
+  {
+    "Department": "Деканат",
+    "City": 645706
+  },
+  {
+    "Department": "Деканат",
+    "Position": "Декан",
+    "Internal": 3005
+  },
+  {
+    "Position": "Заместитель декана по учебной части",
+    "Department": "Деканат",
+    "FullName": "Накипова Саяжан Жеткеновна",
+    "Internal": 3012,
+    "Email": "Sayazhan.Nakipova@astanait.edu.kz"
+  },
+  {
+    "Position": "Менеджер",
+    "Department": "Деканат",
+    "FullName": "Башеева Алима Бақтығалиқызы",
+    "Internal": 2011,
+    "Email": "a.basheyeva@astanait.edu.kz"
+  },
+  {
+    "Position": "Специалист ",
+    "Department": "Деканат",
+    "FullName": "Салгараев Нурсултан Рыспекулы",
+    "Internal": 3042
+  },
+  {
+    "Department": "Департамент вычислительной техники и данных",
+    "City": 645695
+  },
+  {
+    "Department": "Департамент вычислительной техники и данных",
+    "Position": "Директор",
+    "FullName": "Тұрар Олжас ",
+    "Email": "Olzhas.Turar@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент вычислительной техники и данных",
+    "Position": "Директор",
+    "FullName": "Айдана жалгас",
+    "Internal": 3044
+  },
+  {
+    "Department": "Департамент вычислительной техники и данных",
+    "Position": "Менеджер",
+    "FullName": "Светлана Хазгалиева",
+    "Internal": 3009
+  },
+  {
+    "Position": "Директор",
+    "Department": "Департамент компьютерной инженерии",
+    "FullName": "Смайыл Асель Маралбаевна",
+    "Internal": 2010,
+    "Email": "Assel.Smaiyl@astanait.edu.kz"
+  },
+  {
+    "Position": "Менеджер",
+    "Department": "Департамент компьютерной инженерии",
+    "FullName": "Аябекова Данара Нурланкызы",
+    "Internal": 2041,
+    "Email": "d.ayabekova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент интеллектуальных систем и кибербезопасности",
+    "City": 645697
+  },
+  {
+    "Department": "Департамент интеллектуальных систем и кибербезопасности",
+    "Position": "Директор",
+    "FullName": "Ильясов Бауыржан Рашитович",
+    "Internal": 3010,
+    "Email": "Baurzhan.Ilyassov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент интеллектуальных систем и кибербезопасности",
+    "Position": "Менеджер ",
+    "FullName": "Ногайбаева Гульзат Бахытовна",
+    "Internal": 2138,
+    "Email": "g.nogaibayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социальных наук",
+    "City": 645698
+  },
+  {
+    "Department": "Департамент социальных наук",
+    "Position": "Директор",
+    "FullName": "Тлешова Жибек Кенесбеккызы",
+    "Internal": 2017,
+    "Email": "Zhibek.Tleshova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социальных наук",
+    "Position": "Менеджер Департамента социальных наук",
+    "FullName": "Меруерт",
+    "Internal": 3011,
+    "Email": "m.ibrayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Школа Креативных Индустрий",
+    "Position": "И.о. Директора",
+    "FullName": "Ибадильдин Нурхат Амангельдинович",
+    "Internal": 3023,
+    "Email": "Ibadildin.Nurkhat@astanait.edu.kz"
+  },
+  {
+    "Department": "Школа Креативных Индустрий",
+    "Position": "Менеджер",
+    "FullName": "Балтбаеава Камила",
+    "Internal": 3028,
+    "Email": "k.baltabayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Академический департамент",
+    "City": 645707
+  },
+  {
+    "Department": "Академический департамент",
+    "Position": "Директор",
+    "FullName": "Солтан Гульжан Жексенбаевна ",
+    "Internal": 2020,
+    "Email": "gulzhan.soltan@astanait.edu.kz"
+  },
+  {
+    "Department": "Академический департамент",
+    "Position": "Заместитель директора",
+    "FullName": "Имашева Асель Шамильевна",
+    "Internal": 2106,
+    "Email": "a.imasheva@astanait.edu.kz"
+  },
+  {
+    "Department": "Академический департамент",
+    "Position": "Главный менеджер",
+    "FullName": "Бакенова Айнур Маратбековна",
+    "Internal": 2021,
+    "Email": "ainur.bakenova@astanait.edu.kz"
+  },
+  {
+    "Department": "Академический департамент",
+    "Position": "Специалист-диспетчер",
+    "FullName": "Ерзатова Мөлдір",
+    "Internal": 2028,
+    "Email": "m.yerzatova@astanait.edu.kz"
+  },
+  {
+    "Department": "Студенческий отдел ",
+    "City": 645707
+  },
+  {
+    "Department": "Студенческий отдел ",
+    "Position": "Руководитель",
+    "FullName": "Мукалиева Мадина Нурлановна",
+    "Internal": 2067,
+    "Email": "Madina.Mukaliyeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Студенческий отдел ",
+    "Position": "Менеджер ",
+    "FullName": "Искакова Еренгуль Елкеновна",
+    "Internal": 3024,
+    "Email": "Yerengul.Iskakova@astanait.edu.kz"
+  },
+  {
+    "Department": "Студенческий отдел ",
+    "Position": "Специалист",
+    "FullName": "Нупбаева Жанель Сейсенбаевна",
+    "Internal": 2061,
+    "Email": "zh.nupbayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Студенческий отдел ",
+    "Position": "Менеджер ",
+    "FullName": "Аскарова Гульмира Тулюбаевна   (на п\/д д\/о Искаковой Е.) ",
+    "Internal": 2023,
+    "Email": "gulmira.askarova@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр карьеры и трудоустройства",
+    "City": 645707
+  },
+  {
+    "Department": "Центр карьеры и трудоустройства",
+    "Position": "Руководитель",
+    "FullName": "Айгерим Алибек",
+    "Internal": 2095,
+    "Email": "aigerim.alibek@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр карьеры и трудоустройства",
+    "Position": "Менеджер",
+    "FullName": "Тлеуханова Марал Маратқызы",
+    "Internal": 3033,
+    "Email": "m.tleukhanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр карьеры и трудоустройства",
+    "Position": "Специалист",
+    "FullName": "Дүйсебай Ақерке Ғалымжанқызы",
+    "Internal": 3025,
+    "Email": "a.duisebay@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "City": 645707
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "Position": "Руководитель",
+    "FullName": "Койтанова Алия Женисовна",
+    "Internal": 2025,
+    "Email": "aliya.koitanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "Position": "Регистратор",
+    "FullName": "Джарас Айғаным Айтчанқызы",
+    "Internal": 2022
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "Position": "Регистратор",
+    "FullName": "Раушанова Самал",
+    "Internal": 3040,
+    "Email": "S.Raushanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "Position": "Главный регистратор",
+    "FullName": "Смагулова Айнагуль Олжабаевна",
+    "Internal": 2024,
+    "Email": "Ainagul.Smagulova@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "Position": "Регистратор",
+    "FullName": "Исатаева Ботагоз Абильхасеновна",
+    "Internal": 2029,
+    "Email": "Botagoz.Issatayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел офис-регистратора ",
+    "Position": "Главный регистратор",
+    "FullName": "Ақшатауова Азиза Балдашқызы",
+    "Internal": 3006,
+    "Email": "Aziza.Akshatauova@astanait.edu.kz"
+  },
+  {
+    "Department": "Научная библиотека",
+    "City": 645717
+  },
+  {
+    "Department": "Научная библиотека",
+    "Position": "Директор",
+    "FullName": "Нуралина Марал Турехановна",
+    "Internal": 2058,
+    "Email": "Maral.Nuralina@astanait.edu.kz"
+  },
+  {
+    "Department": "Научная библиотека",
+    "Position": "Библиотекарь",
+    "FullName": "Ахметова Марал Дихановна",
+    "Internal": 2050,
+    "Email": "m.akhmetova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент международного сотрудничества",
+    "City": 645708
+  },
+  {
+    "Department": "Департамент международного сотрудничества",
+    "Position": "Директор",
+    "FullName": "Салыкова Лейла Нуртлеуовна",
+    "Internal": 2030,
+    "Email": "Leila.Salykova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент международного сотрудничества",
+    "Position": "Главный менеджер",
+    "FullName": "Омарханова Алия Мадвакасовна",
+    "Internal": 2031,
+    "Email": "aliya.omarkhanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент международного сотрудничества",
+    "Position": "Специалист",
+    "FullName": "Зейноллаев Адиль Кадылбекович",
+    "Internal": 2032,
+    "Email": "a.zeinollayev@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по обеспечению качества",
+    "City": 645727
+  },
+  {
+    "Department": "Департамент по обеспечению качества",
+    "Position": "Директор",
+    "FullName": "Касенов Ханат Нурбикович",
+    "Internal": 2166,
+    "Email": "Khanat.Kassenov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по обеспечению качества",
+    "Position": "Главный академический комплаенс-офицер",
+    "FullName": "Есмагулова Нургуль Дюсеновна",
+    "Email": "n.yesmagulova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по обеспечению качества",
+    "Position": "Главный менеджер ",
+    "FullName": "Бурбекова Сауле Жорабековна ",
+    "Internal": 2148,
+    "Email": "saule.burbekova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент финансово-экономического планирования и анализа",
+    "City": 645729
+  },
+  {
+    "Department": "Департамент финансово-экономического планирования и анализа",
+    "Position": "Директор",
+    "FullName": "Ибраева Алем Болатовна ",
+    "Internal": 2070,
+    "Email": "Alem.Ibrayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент финансово-экономического планирования и анализа",
+    "Position": "Главный экономист",
+    "FullName": "Игибаева Айина Борамбаевна",
+    "Internal": 2085,
+    "Email": "Aiina.Igibayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент финансово-экономического планирования и анализа",
+    "Position": "Главный экономист",
+    "FullName": "Рымкулова Ляззат Амантаевна",
+    "Internal": 2054,
+    "Email": "l.rymkulova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "City": 645728
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Директор",
+    "FullName": "Файзуллин Адиль Рамазанович  ",
+    "Internal": 2146,
+    "Email": "Adil.Faizullin@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Главный менеджер по закупкам",
+    "FullName": "Сомтемирова Эльмира",
+    "Internal": 2165,
+    "Email": "elmira.somtemirova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Менеджер",
+    "FullName": "Кантаева Дина Сериковна",
+    "Internal": 2086,
+    "Email": "d.kantayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Ассистент ректора",
+    "Internal": 2160
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Ассистент проректоров",
+    "Email": "aigerim.akizhanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Специалист по цифровому документообороту",
+    "FullName": "Балтабекова Айнур Мухитденовна",
+    "Internal": 2141,
+    "Email": "ainur.baltabekova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент стратегии и корпоративного управления ",
+    "Position": "Референт",
+    "FullName": "Агзам Жүсіпжан ",
+    "Internal": 2105,
+    "Email": "Zhussipzhan.Akzam@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "City": 645720
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "Position": "Ведущий бухгалтер",
+    "FullName": "Арынова Динара",
+    "Internal": 2150,
+    "Email": "dinara.arynova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "Position": "Ведущий бухгалтер",
+    "FullName": "Ерназарова Асель Жаркинбековна ",
+    "Internal": 2151,
+    "Email": "Assel.Yernazarova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "Position": "Ведущий бухгалтер",
+    "FullName": "Сейткалиева Рмалды Азыркановна  ",
+    "Internal": 2152,
+    "Email": "rmaldy.seitkaliyeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "Position": "Бухгалтер",
+    "FullName": "Ахмадиева Гульдана Серикболовна",
+    "Internal": 2153,
+    "Email": "g.akhmadiyeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "Position": "Бухгалтер",
+    "FullName": "Кенжетаева Айгуль Базархановна",
+    "Internal": 2060,
+    "Email": "A.Kenzhetayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент бухгалтерского учета ",
+    "Position": "Ведущий бухгалтер",
+    "FullName": "Садуакасова Багдина Манасовна",
+    "Internal": 2154,
+    "Email": "bagdina.saduakasova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "City": 645704
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "Директор",
+    "FullName": "Амандыков Аян Кошкенович",
+    "Internal": 2033,
+    "Email": "a.amandykov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "Советник Ректора по обеспечению безопасности",
+    "FullName": "Давыдов Денис Викторович ",
+    "Internal": 2149,
+    "Email": "d.davydov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "Ведущий специалист",
+    "FullName": "Сеилканова Мадина Мирасовна",
+    "Internal": 2147,
+    "Email": "madina.seilkanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "Ведущий специалист",
+    "FullName": "Каскырбаева Мира",
+    "Internal": 2015,
+    "Email": "m.kaskyrbayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "HR специалист",
+    "FullName": "Нуранова Динара Джолдасбаевна",
+    "Internal": 3027,
+    "Email": "d.nuranova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "Специалист",
+    "FullName": "Асылгазина Алма",
+    "Internal": 3036
+  },
+  {
+    "Department": "Департамент правового обеспечения и управления персоналом ",
+    "Position": "Специалист",
+    "FullName": "Майдырова Асель Амангосовна",
+    "Internal": 2016,
+    "Email": "assel.maidyrova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и закупок ",
+    "City": 645704
+  },
+  {
+    "Department": "Департамент правового обеспечения и закупок ",
+    "Position": "Директор",
+    "Internal": 3019
+  },
+  {
+    "Department": "Департамент правового обеспечения и закупок ",
+    "Position": "Главный менеджер",
+    "FullName": "Аргинбеков Асанали Анарбекович",
+    "Internal": 2135,
+    "Email": "Assanali.Arginbekov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент правового обеспечения и закупок ",
+    "Position": "Юрист",
+    "FullName": "Азылкиясова Жамиля Саматовна",
+    "Internal": 2027,
+    "Email": "Zhamilya.Azylkiyassova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "City": 645713
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Директор",
+    "FullName": "Жакиев Нурхат Куандыкович",
+    "Internal": 2110,
+    "Email": "Nurkhat.Zhakiyev@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Менеджер",
+    "FullName": "Махамбетова Жансая Кайырбаевна",
+    "Internal": 2112,
+    "Email": "zhansaya.makhambetova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Специалист",
+    "FullName": "Имангалиев Алмас Темирбекович",
+    "Internal": 2111,
+    "Email": "a.imangaliyev@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Менеджер",
+    "FullName": "Каскабаева Дана Бердіжанқызы",
+    "Internal": 2111,
+    "Email": "d.kaskabayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Главный менеджер ",
+    "FullName": "Камбарова Жулдыз Думанбековна ",
+    "Internal": 2113,
+    "Email": "Zhulduz.Kambarova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Научный сотрудник",
+    "FullName": "Ермеков Алтынбек",
+    "Internal": 2115,
+    "Email": "altynbek.yermekov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Научный сотрудник",
+    "FullName": "Гульден Омарова",
+    "Internal": 3041
+  },
+  {
+    "Department": "Департамент науки и инноваций",
+    "Position": "Литературный редактор",
+    "FullName": "Бишимбаева Меруерт Әзімханқызы",
+    "Internal": 3032,
+    "Email": "m.bishimbayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Лаборатория \"FabLab\"",
+    "Position": "Заведующий лабораторией",
+    "FullName": "Даулетия  Данияр Дауренұлы",
+    "Internal": 2114,
+    "Email": "D.Dauletiya@astanait.edu.kz"
+  },
+  {
+    "Department": "SmartCity",
+    "Position": "Директор",
+    "FullName": "Едилхан Дидар",
+    "Internal": 3031,
+    "Email": "d.yedilkhan@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр \"Больших данных и блокчейн технологии\"",
+    "Position": "Директор",
+    "FullName": "Нугуманова Алия Багдатовна",
+    "Internal": 3022,
+    "Email": "a.nugumanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр компетенций и совершенства ",
+    "City": 645714
+  },
+  {
+    "Department": "Центр компетенций и совершенства ",
+    "Position": "Директор",
+    "FullName": "Токсанов Сапар Нурахметович ",
+    "Internal": 2120,
+    "Email": "sapar.toxanov@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр компетенций и совершенства ",
+    "Position": "Главный менеджер ",
+    "FullName": "Абжанова Дилара Ерлановна",
+    "Internal": 2124,
+    "Email": "dilara.abzhanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр компетенций и совершенства ",
+    "Position": "Менеджер",
+    "FullName": "Махсотова Назерке Исатаевна",
+    "Internal": 3026,
+    "Email": "n.makhsotova@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр компетенций и совершенства ",
+    "Position": "Специалист",
+    "FullName": "Тюлюбаева Гаухар Сапаргалеевна",
+    "Internal": 3034,
+    "Email": "g.tyulyubayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр компетенций и совершенства ",
+    "Position": "Специалист",
+    "FullName": "Шарипова Салтанат Еркиновна ",
+    "Internal": 2123,
+    "Email": "saltanat.Sharipova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социально-воспитательной работы",
+    "City": 645709
+  },
+  {
+    "Department": "Департамент социально-воспитательной работы",
+    "Position": "Директор",
+    "FullName": "Кенжебеков Арман Хуандыкович",
+    "Internal": 2040,
+    "Email": "arman.kenzhebekov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социально-воспитательной работы",
+    "Position": "Менеджер",
+    "FullName": "Абильтаева Айнур Асхатовна",
+    "Internal": 2045,
+    "Email": "a.abiltayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социально-воспитательной работы",
+    "Position": "Менеджер ",
+    "FullName": "Муратов Бауыржан Акылбекович",
+    "Internal": 2046,
+    "Email": "b.muratov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социально-воспитательной работы",
+    "Position": "Куратор",
+    "FullName": "Жакенова Айсулу Жаксылыковна  ",
+    "Email": "aislu.zhakenova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент социально-воспитательной работы",
+    "Position": "Куратор",
+    "FullName": "Жаймухамедова Айжан Саркытбаевна",
+    "Email": "a.zhaimukhamedova@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр психологической консультации ",
+    "City": 645711
+  },
+  {
+    "Department": "Центр психологической консультации ",
+    "Position": "Психолог",
+    "FullName": "Тен Юлия ",
+    "Internal": 2044,
+    "Email": "yu.ten@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент информационных технологий",
+    "City": 645719
+  },
+  {
+    "Department": "Департамент информационных технологий",
+    "Position": "Директор",
+    "FullName": "Нурахов Едиль Сергазиевич",
+    "Internal": 2002,
+    "Email": "y.nurakhov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент информационных технологий",
+    "Position": "Заместитель директора",
+    "FullName": "Исламов Абулхаир Алишерулы ",
+    "Internal": 2137,
+    "Email": "Abulkhair.Islamov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент информационных технологий",
+    "Position": "Специалист",
+    "FullName": "Есенкелді Айым Есенкелдіқызы",
+    "Internal": 2101,
+    "Email": "a.esenkeldi@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел разработки программного обеспечения",
+    "Position": "Ведущий инженер-разработчик",
+    "FullName": "Бейсен Ерсултан Бердибекулы",
+    "Internal": 3018,
+    "Email": "b.yersultan@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел технического обеспечения",
+    "Position": "Ведущий инженер по сетям и кибербезопасности",
+    "FullName": "Макатов Арстан Кутжанович ",
+    "Internal": 2133,
+    "Email": "Arstan.Makatov@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел технического обеспечения",
+    "Position": "Ведущий инженер по серверной инфраструктуре",
+    "FullName": "Ахметжанов Батыржан Қайратұлы ",
+    "Internal": 2139,
+    "Email": "batyrzhan.akhmetzhanov@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел технического обеспечения",
+    "Position": "Специалист по медиа лаборатории ",
+    "FullName": "Газизов Амир Амангелдыевич",
+    "Internal": 2062,
+    "Email": "a.gazizov@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел технического обеспечения",
+    "Position": "Инженер ПО",
+    "FullName": "Нагенбай Ануар Лукпанулы",
+    "Internal": 3037,
+    "Email": "anuar.nagenbay@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел технического обеспечения",
+    "Position": "Сетевой инженер",
+    "FullName": "Кенесары",
+    "Internal": 3038
+  },
+  {
+    "Department": "Отдел технического обеспечения",
+    "Position": "Инженер по работе с полиграфическим оборудованием",
+    "FullName": "Амиров Абзал Абаевич ",
+    "Internal": 3039,
+    "Email": "Abzal.Amirov@astanait.edu.kz"
+  },
+  {
+    "Department": "Отдел сопровождения академического программного обеспечения",
+    "Position": "Ведущий инженер-программист",
+    "FullName": "Тульжанов Олжас Алимханулы",
+    "Internal": 2056,
+    "Email": "Olzhas.Tulzhanov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "City": 645718
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "Директор",
+    "FullName": "Жанай Темирлан Талгатович",
+    "Internal": 2145,
+    "Email": "temirlan.zhanay@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "Digital-маркетолог ",
+    "FullName": "Жунусов Нуржан Жумабайулы"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "Главный менеджер ",
+    "FullName": "Абдикерим Сулушаш Ерланкызы",
+    "Internal": 3004,
+    "Email": "Sulushash.Abdikerim@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "Дизайнер",
+    "FullName": "Қасенбеков Шахмардан Нариманұлы"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "Фотограф и видео-мейкер",
+    "FullName": "Ырысбек Әділбекұлы",
+    "Internal": 2064,
+    "Email": "yrysbek.adilbekuly@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "SMM – специалист ",
+    "FullName": "Қабаева Томирис Бауржанқызы"
+  },
+  {
+    "Department": "Департамент маркетинга и связям с общественностью",
+    "Position": "Медиа руководитель",
+    "FullName": "Темір Балжан Мәдиярқызы",
+    "Internal": 2143,
+    "Email": "b.temir@astanait.edu.kz"
+  },
+  {
+    "Department": "Научно-инновационный центр Ed Tech",
+    "City": 643448
+  },
+  {
+    "Department": "Научно-инновационный центр Ed Tech",
+    "Position": "Директор",
+    "FullName": "Алимжанов Ермек Серикович",
+    "Internal": 2140,
+    "Email": "Ermek.Alimzhanov@astanait.edu.kz"
+  },
+  {
+    "Department": "Научно-инновационный центр Ed Tech",
+    "Position": "Младший научный сотрудник",
+    "FullName": "Абсадык Азат Маратұлы ",
+    "Internal": 2132,
+    "Email": "azat.absadyk@astanait.edu.kz"
+  },
+  {
+    "Department": "Представитель Expo",
+    "Position": "Представитель Expo",
+    "City": 645725,
+    "FullName": "Шайдолла Кудайбергенович",
+    "Internal": 2196,
+    "Email": "Shaidulla.Sholahov@astanait.edu.kz"
+  },
+  {
+    "Department": "Центр \"Industry 4.0\"",
+    "Position": "Директор",
+    "FullName": "Нефтисов Александр Витальевич ",
+    "Internal": 3001,
+    "Email": "Alexandr.Neftissov@astanait.edu.kz"
+  },
+  {
+    "Department": "Канцелярия ",
+    "City": 645716
+  },
+  {
+    "Department": "Канцелярия ",
+    "Position": "Специалист канцелярии",
+    "FullName": "Балтабекова Айнур",
+    "Internal": 2141,
+    "Email": "ainur.baltabekova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "City": 645721
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Директор",
+    "FullName": "Кошкенов Канат Омарбаевич ",
+    "Internal": 2170,
+    "Email": "Kanat.Koshkenov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Главный инженер ",
+    "FullName": "Лямбеков Ерлан Сапаргалиевич",
+    "Internal": 2181,
+    "Email": "erlan.lyambekov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Инженер по пожарной безопасности",
+    "FullName": "Увалиев Мийрам Кожаевич",
+    "Internal": 2176,
+    "Email": "Miiram.Uvaliyev@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Инженер по безопасности и охране труда",
+    "FullName": "Мадиева Риза Абылкасыновна",
+    "Internal": 2171,
+    "Email": "r.madiyeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Специалист",
+    "FullName": "Искалиева Нургуль Абдельнасеровна ",
+    "Internal": 2172,
+    "Email": "Nurgul.Iskalieva@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Специалист",
+    "FullName": "Аренова Гульнур Тулегеновна",
+    "Internal": 2173,
+    "Email": "Gulnur.Arenova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Заведущий складом ",
+    "FullName": "Асылгазина Алма Тулегеновна",
+    "Internal": 2175,
+    "City": null,
+    "Email": "Alma.Asylgazina@astana.it.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Комендант учебного корпуса",
+    "FullName": "Конырова Жанетта Есенгельдиновна ",
+    "Internal": 2174,
+    "Email": "zhanetta.konyrova@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Комендант жилых помещений",
+    "FullName": "Жунусов Утеген Зейнуллович",
+    "Email": "utegen.zhunusov@astanait.edu.kz"
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Менеджер - консультант (ресепшионист)",
+    "FullName": "Керімбек Самал Әмірханқызы          ",
+    "Internal": 2000
+  },
+  {
+    "Department": "Департамент по хозяйственной работе",
+    "Position": "Менеджер - консультант (ресепшионист)",
+    "FullName": "Закенова Эльмира Кенгесовна",
+    "Internal": 2000
+  },
+  {
+    "Department": "Колледж",
+    "City": 645696
+  },
+  {
+    "Department": "Колледж",
+    "Position": "Директор",
+    "FullName": "Смаилов Данияр Нургалиевич",
+    "Internal": 3007,
+    "Email": "d.smailov@astanait.edu.kz"
+  },
+  {
+    "Department": "Колледж",
+    "Position": "Заместитель директора колледжа по учебной работе",
+    "FullName": "Закарьянова Алина Эркблановна",
+    "Internal": 3008,
+    "Email": "alina.zakaryanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Колледж",
+    "Position": "Заместитель директора по учебно-методической части",
+    "FullName": "Онгарбаева Айнур Сериковна",
+    "Internal": 2066,
+    "Email": "ainur.ongarbayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Колледж",
+    "Position": "Заместитель директора по учебно-воспитательной работе",
+    "FullName": "Пернебаева Роза Емелевна",
+    "Internal": 3030,
+    "Email": "r.pernebayeva@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "City": 645730
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Начальник военной кафедры",
+    "FullName": "Аширов Александр Каримович",
+    "Internal": 2080,
+    "Email": "a.ashirov@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель - заместитель заведующего кафедрой",
+    "FullName": "Хамитов Ришад Садыкович",
+    "Internal": 2098,
+    "Email": "Rishad.Khamitov@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель - заместитель заведующего кафедрой",
+    "FullName": "Пересыпкин Алексей Васильевич",
+    "Internal": 2081,
+    "Email": "Alexei.Peresipkin@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель - начальник цикла",
+    "FullName": "Герасимов Сергей Владимирович",
+    "Internal": 2131,
+    "Email": "sgerasimov@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель - начальник цикла",
+    "FullName": "Тумпуров Олег Гарриевич",
+    "Internal": 2131,
+    "Email": "oleg.tumpurov@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель - начальник цикла",
+    "FullName": "Кожахметов Ерзат Турсынович",
+    "Internal": 2131
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель",
+    "FullName": "Каиржанов Асет Сагындыкович",
+    "Email": "Aset.Kairzhanov@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель ",
+    "FullName": "Досумов Дулат Катранович",
+    "Internal": 2131,
+    "Email": "Dulat.Dosumov@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Преподаватель",
+    "FullName": "Аблаев Шади Жаксылыкович",
+    "Internal": 3014,
+    "Email": "shadi.ablaev@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Инструктор",
+    "Internal": 3016
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Старший преподаватель - Начальник цикла",
+    "FullName": "Мухамеджанова Шынар Сыйлаухановна",
+    "Internal": 3013,
+    "Email": "shynar.mukhamedzhanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Военная кафедра",
+    "Position": "Преподаватель",
+    "FullName": "Акишбаев Сырымбек Серикбекович",
+    "Email": "syrymbek.akishbayev@astanait.edu.kz"
+  },
+  {
+    "Department": "Учебно-вспомогательный персонал Военной кафедры",
+    "Position": "Заведующий учебной лабороторией ",
+    "FullName": "Нурахметова Назым Ертисовна",
+    "Internal": 2082,
+    "Email": "Nazym Ertisovna@astanait.edu.kz"
+  },
+  {
+    "Department": "Учебно-вспомогательный персонал Военной кафедры",
+    "Position": "Специалист высшего уровня квалификации ",
+    "FullName": "Каиржанова Айнаш Кенжекуловна",
+    "Email": "Ainash.Kairzhanova@astanait.edu.kz"
+  },
+  {
+    "Department": "Медпункт",
+    "Internal": 2198
+  },
+  {
+    "Department": "Приемная комиссия",
+    "City": 645710
+  },
+  {
+    "Department": "Приемная комиссия",
+    "Position": "Allaitu",
+    "FullName": "allaitu@astanait.edu.kz",
+    "City": null
+  },
+  {
+    "Department": "Приемная комиссия",
+    "Position": "Staff",
+    "FullName": "staff@astanait.edu.kz",
+    "City": null
+  },
+  {
+    "Department": "Приемная комиссия",
+    "Position": "Academics",
+    "FullName": "academics@astanait.edu.kz",
+    "City": null
+  },
+  {
+    "Department": "Приемная комиссия",
+    "Position": "Students",
+    "FullName": "students@astanait.edu.kz",
+    "City": null
+  },
+  {
+    "Department": "Приемная комиссия",
+    "Position": "HelpDesk IT",
+    "FullName": "helpdesk@astanait.edu.kz"
+  }
+]

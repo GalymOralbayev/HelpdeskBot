@@ -1,4 +1,4 @@
-using Helpdesk.Application.Services;
+using Helpdesk.App.Helpers;
 using Helpdesk.Infrastructure.Impl;
 using Helpdesk.Infrastructure.Impl.Options;
 using Helpdesk.Infrastructure.Impl.Services;
@@ -14,9 +14,15 @@ builder.Services.Configure<TelegramOptions>(options => builder.Configuration.Get
 builder.Services.Configure<EmailOptions>(options => builder.Configuration.GetSection(EmailOptions.SectionName).Bind(options));
 builder.Services.AddDataAccessPostgresql(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddScoped<DbInitializer>();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var dbInitializer = scope.ServiceProvider.GetRequiredService<DbInitializer>();
+    await dbInitializer.Init();
+}
 
 var telegramService = app.Services.GetRequiredService<TelegramService>();
 await telegramService.StartReceivingAsync();

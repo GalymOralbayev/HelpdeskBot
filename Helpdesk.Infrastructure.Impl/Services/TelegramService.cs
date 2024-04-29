@@ -1,10 +1,8 @@
-using System.Net.Http.Headers;
 using CSharpFunctionalExtensions;
 using Helpdesk.Infrastructure.Impl.Options;
 using Helpdesk.Application.Services;
 using Helpdesk.Domain.Constants;
-using Helpdesk.Domain.Entities;
-using Microsoft.Extensions.DependencyInjection;
+using Helpdesk.Infrastructure.Impl.Services.ButtonHandlerServices;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Telegram.Bot;
@@ -21,14 +19,21 @@ public class TelegramService : ITelegramService {
     private readonly TelegramBotClient _botClient;
     private readonly TelegramOptions _options;
     private readonly CancellationTokenSource _cts = new();
-    private readonly EmailButtonHandlerService emailButtonHandlerService;
-    private Dictionary<long, string?> _chatStates = new Dictionary<long, string?>();
+    private readonly EmailButtonHandlerService _emailButtonHandlerService;
+    private readonly PhoneReferenceButtonHandlerService _phoneReferenceButtonHandlerService;
+    private readonly Dictionary<long, string?> _chatStates = new Dictionary<long, string?>();
 
-    public TelegramService(ILogger<TelegramService> logger, IOptions<TelegramOptions> options, EmailButtonHandlerService emailButtonHandlerService) {
+    public TelegramService(
+        ILogger<TelegramService> logger, 
+        IOptions<TelegramOptions> options,
+        EmailButtonHandlerService emailButtonHandlerService,
+        PhoneReferenceButtonHandlerService phoneReferenceButtonHandlerService) {
+        
         _logger = logger;
-        this.emailButtonHandlerService = emailButtonHandlerService;
-        _options = options.Value;
-        _botClient = new TelegramBotClient(_options.BotToken);
+        this._emailButtonHandlerService = emailButtonHandlerService;
+        this._phoneReferenceButtonHandlerService = phoneReferenceButtonHandlerService;
+        this._options = options.Value;
+        this._botClient = new TelegramBotClient(_options.BotToken);
     }
 
     /// <summary> Отправить исходящее сообщение в Telegram </summary> 
@@ -128,13 +133,20 @@ public class TelegramService : ITelegramService {
                 await SendMessageAsync(message.Chat.Id, ConstantStings.HelpText); break;
             case Buttons.SendEMail: 
                 _chatStates[message.Chat.Id] = Buttons.SendEMail;
-                var isDone = await emailButtonHandlerService.HandleMessageAsync(botClient, message, ct);
-                if (isDone) {
-                    _chatStates[message.Chat.Id] = null;
-                    await SendMessageAsync(message.Chat.Id, "Ваше письмо отправлено! \nВыберите новую опцию:");
-                }
+                if (!await _emailButtonHandlerService.HandleMessageAsync(botClient, message, ct))
+                    return Result.Success();
+                
+                _chatStates[message.Chat.Id] = null;
+                await SendMessageAsync(message.Chat.Id, "Ваше письмо отправлено! \nВыберите новую опцию:");
                 return Result.Success();
-            case Buttons.PhoneReferences: await PhoneReferencesButtonHandler(ct); break;
+            case Buttons.PhoneReferences: 
+                _chatStates[message.Chat.Id] = Buttons.PhoneReferences;
+                if (!await _phoneReferenceButtonHandlerService.HandleMessageAsync(botClient, message, ct))
+                    return Result.Success();
+                
+                _chatStates[message.Chat.Id] = null;
+                await SendMessageAsync(message.Chat.Id);
+                return Result.Success();
             case Buttons.GetInstructions: await GetInstructionsButtonHandler(ct); break;
             case Buttons.HelperContacts: await SendMessageAsync(message.Chat.Id, ConstantStings.TechnicalSupportContacts); break;
             case Buttons.UniversityMap: await SendMessageAsync(message.Chat.Id, ConstantStings.MapLink); break;
@@ -159,23 +171,7 @@ public class TelegramService : ITelegramService {
         return Task.CompletedTask;
     }
 
-    private Task HelpButtonHandler(CancellationToken ct) {
-        return Task.CompletedTask;
-    }
-
-    private Task PhoneReferencesButtonHandler(CancellationToken ct) {
-        return Task.CompletedTask;
-    }
-
     private Task GetInstructionsButtonHandler(CancellationToken ct) {
-        return Task.CompletedTask;
-    }
-
-    private Task HelperContactsButtonHandler(CancellationToken ct) {
-        return Task.CompletedTask;
-    }
-
-    private Task UniversityMapButtonHandler(CancellationToken ct) {
         return Task.CompletedTask;
     }
 

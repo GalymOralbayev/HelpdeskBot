@@ -1,5 +1,4 @@
 using Helpdesk.Application.Services;
-using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
 using Helpdesk.Infrastructure.Impl.Options;

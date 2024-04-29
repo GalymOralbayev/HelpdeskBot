@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Helpdesk.Domain.Abstraction;
+﻿namespace Helpdesk.Domain.Abstraction;
 
 public interface IEntity {
     Guid Id { get; set; }

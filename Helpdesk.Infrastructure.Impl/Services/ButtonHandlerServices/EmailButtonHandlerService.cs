@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace Helpdesk.Infrastructure.Impl.Services;
+namespace Helpdesk.Infrastructure.Impl.Services.ButtonHandlerServices;
 
 public class EmailButtonStates {
     public const string AwaitingEmailAddress = "await_email";
@@ -28,7 +28,7 @@ public class EmailButtonHandlerService {
                 await ProcessEmail(botClient, message, ct);
                 return false;
             case EmailButtonStates.AwaitingMessage:
-                await SendEmail(botClient, message, ct);
+                await SendEmail(message, ct);
                 return true;
             default: await Main(botClient, message, ct);
                 return false;
@@ -58,7 +58,7 @@ public class EmailButtonHandlerService {
         _emailChatStates[message.Chat.Id] = EmailButtonStates.AwaitingEmailAddress;
     }
 
-    private async Task SendEmail(ITelegramBotClient botClient, Message message, CancellationToken ct) {
+    private async Task SendEmail(Message message, CancellationToken ct) {
         using var scope = _scopeFactory.CreateScope();
         var emailService = scope.ServiceProvider.GetRequiredService<IEmailService>();
         var userService = scope.ServiceProvider.GetRequiredService<IUserService>();
