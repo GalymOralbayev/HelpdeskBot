@@ -26,7 +26,7 @@ public class PhoneReferenceRepository : IPhoneReferenceRepository{
     
     public async Task<List<PhoneReference>> Search(string searchingText, CancellationToken ct) {
         var phoneReferences = await _set
-            .Where(x => x!.SearchColumn!.Contains(searchingText))
+            .Where(x => x!.SearchColumn!.Contains(searchingText.ToLower()))
             .OrderBy(x => x.Department)
             .ThenBy(x => x.Position)
             .ThenBy(x => x.FullName)

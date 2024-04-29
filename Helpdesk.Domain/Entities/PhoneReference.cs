@@ -23,7 +23,7 @@ public class PhoneReference : IEntity {
         InternalNumber = internalNumber;
         CityNumber = cityNumber;
         Email = email;
-        SearchColumn = $"{Position} {Department} {FullName} {InternalNumber} {CityNumber} {Email}";
+        SearchColumn = $"{Position} {Department} {FullName} {InternalNumber} {CityNumber} {Email}".ToLower();
     }
 
     public override string ToString() {
