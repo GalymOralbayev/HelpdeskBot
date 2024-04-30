@@ -23,7 +23,7 @@ public class InstructionRepository : IInstructionRepository{
         await _context.SaveChangesAsync(ct);
     }
 
-    public async Task<Instruction> GetByName(string name, CancellationToken ct) {
+    public async Task<Instruction?> GetByName(string name, CancellationToken ct) {
         return await _set
             .Include(x => x.Steps)
             .ThenInclude(x => x.Photos)

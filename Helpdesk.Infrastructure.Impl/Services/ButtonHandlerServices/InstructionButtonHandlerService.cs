@@ -58,7 +58,7 @@ public class InstructionButtonHandlerService {
         var instructionRepository = scope.ServiceProvider.GetRequiredService<IInstructionRepository>();
         var instruction = await instructionRepository.GetByName(message.Text, ct);
 
-        if (instruction.Steps.Any()) {
+        if (instruction != null && instruction.Steps.Any()) {
             foreach (var step in instruction.Steps.OrderBy(x => x.StepNumber)) {
                 
                 await botClient.SendTextMessageAsync(
