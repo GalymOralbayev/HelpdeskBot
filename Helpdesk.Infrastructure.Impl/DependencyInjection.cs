@@ -13,9 +13,12 @@ public static class DependencyInjection {
         services.AddSingleton<TelegramService>();
         services.AddSingleton<EmailButtonHandlerService>();
         services.AddSingleton<PhoneReferenceButtonHandlerService>();
+        services.AddSingleton<RoomButtonHandlerService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IBotUserRepository, BotUserRepository>();
         services.AddScoped<IPhoneReferenceRepository, PhoneReferenceRepository>();
+        services.AddScoped<IRoomRepository, RoomRepository>();
+        services.AddScoped<IArticleRepository, ArticleRepository>();
         services.AddScoped<IEmailService, EmailService>();
         return services;
     }

@@ -17,16 +17,23 @@ namespace Helpdesk.App.Helpers;
 
 public class DbInitializer {
     private readonly IPhoneReferenceRepository _phoneReferenceRepository;
+    private readonly IRoomRepository _roomRepository;
+    private readonly IArticleRepository _articleRepository;
     private readonly ILogger<DbInitializer> _logger;
     private readonly ApplicationContext _dbContext;
     
     public DbInitializer(
         IPhoneReferenceRepository phoneReferenceRepository, 
-        ILogger<DbInitializer> logger, ApplicationContext dbContext) {
+        ILogger<DbInitializer> logger, 
+        ApplicationContext dbContext, 
+        IArticleRepository articleRepository, 
+        IRoomRepository roomRepository) {
         
         _phoneReferenceRepository = phoneReferenceRepository;
         _logger = logger;
         _dbContext = dbContext;
+        _articleRepository = articleRepository;
+        _roomRepository = roomRepository;
     }
 
     public async Task Init(CancellationToken ct = default) {
@@ -43,6 +50,8 @@ public class DbInitializer {
             }
 
             await PhoneReferenceInit(ct);
+            await ArticleInit(ct);
+            await RoomInit(ct);
             
             _logger.LogInformation("Database initialization succeeded for {TotalSeconds}sec",
                 timer.Elapsed.TotalSeconds);
@@ -82,6 +91,52 @@ public class DbInitializer {
             throw;
         }
     }
+
+    private async Task ArticleInit(CancellationToken ct) {
+        try {
+            var hasArticle = await _articleRepository.Any(ct);
+            if (hasArticle) return;
+
+            var path = Path.Combine("Resources", "Initializers", "articles.json");
+            await using var openStream = File.OpenRead(path);
+            var article = await JsonSerializer.DeserializeAsync<List<ArticleInitDto>>(openStream, cancellationToken: ct);
+            if (article is not null) {
+                var articleDbModels = article.Select(x => new Article(
+                    x.Number,
+                    x.Name
+                ));
+                await _articleRepository.InsertRange(articleDbModels, ct);
+            }
+        }
+        catch (Exception e) {
+            _logger.LogError(e, "Roles initialization error: {Message}", e.Message);
+            throw;
+        }
+    }
+    
+    private async Task RoomInit(CancellationToken ct) {
+        try {
+            var hasRooms = await _roomRepository.Any(ct);
+            if (hasRooms) return;
+
+            var path = Path.Combine("Resources", "Initializers", "rooms.json");
+            await using var openStream = File.OpenRead(path);
+            var rooms = await JsonSerializer.DeserializeAsync<List<RoomInitDto>>(openStream, cancellationToken: ct);
+            if (rooms is not null) {
+                foreach (var room in rooms) {
+                    var article = await _articleRepository.GetByName(room.BlockId, ct);
+                    if (article != null) {
+                        await _roomRepository.Insert(
+                            new Room(room.RoomNumber, article, room.IpAddress, room.MacAddress), ct);
+                    }
+                }
+            }
+        }
+        catch (Exception e) {
+            _logger.LogError(e, "Roles initialization error: {Message}", e.Message);
+            throw;
+        }
+    }
 }
 public class PhoneReferenceInitDto {
     public string Position { get; set; }
@@ -90,4 +145,14 @@ public class PhoneReferenceInitDto {
     public long? Internal { get; set; }
     public long? City { get; set; }
     public string Email { get; set; }
+}
+public class ArticleInitDto {
+    public string Name { get; set; }
+    public string Number { get; set; }
+}
+public class RoomInitDto {
+    public string IpAddress { get; set; }
+    public string MacAddress { get; set; }
+    public string BlockId { get; set; }
+    public string RoomNumber { get; set; }
 }

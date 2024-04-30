@@ -17,5 +17,7 @@ namespace SSO.DataAccess.Portgresql.Context {
 
         public DbSet<BotUser> BotUsers { get; set; }
         public DbSet<PhoneReference> PhoneReferences { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Room> Rooms { get; set; }
     }
 }

@@ -22,6 +22,25 @@ namespace Helpdesk.DataAccess.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Helpdesk.Domain.Entities.Article", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Number")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Articles");
+                });
+
             modelBuilder.Entity("Helpdesk.Domain.Entities.BotUser", b =>
                 {
                     b.Property<Guid>("Id")
@@ -74,6 +93,45 @@ namespace Helpdesk.DataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("PhoneReferences");
+                });
+
+            modelBuilder.Entity("Helpdesk.Domain.Entities.Room", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ArticleId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("IpAddress")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("MacAddress")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RoomNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArticleId");
+
+                    b.ToTable("Rooms");
+                });
+
+            modelBuilder.Entity("Helpdesk.Domain.Entities.Room", b =>
+                {
+                    b.HasOne("Helpdesk.Domain.Entities.Article", "Article")
+                        .WithMany()
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
                 });
 #pragma warning restore 612, 618
         }

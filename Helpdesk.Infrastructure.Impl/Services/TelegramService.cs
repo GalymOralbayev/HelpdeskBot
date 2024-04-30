@@ -21,17 +21,19 @@ public class TelegramService : ITelegramService {
     private readonly CancellationTokenSource _cts = new();
     private readonly EmailButtonHandlerService _emailButtonHandlerService;
     private readonly PhoneReferenceButtonHandlerService _phoneReferenceButtonHandlerService;
+    private readonly RoomButtonHandlerService _roomButtonHandlerService;
     private readonly Dictionary<long, string?> _chatStates = new Dictionary<long, string?>();
 
     public TelegramService(
         ILogger<TelegramService> logger, 
         IOptions<TelegramOptions> options,
         EmailButtonHandlerService emailButtonHandlerService,
-        PhoneReferenceButtonHandlerService phoneReferenceButtonHandlerService) {
+        PhoneReferenceButtonHandlerService phoneReferenceButtonHandlerService, RoomButtonHandlerService roomButtonHandlerService) {
         
         _logger = logger;
         this._emailButtonHandlerService = emailButtonHandlerService;
         this._phoneReferenceButtonHandlerService = phoneReferenceButtonHandlerService;
+        _roomButtonHandlerService = roomButtonHandlerService;
         this._options = options.Value;
         this._botClient = new TelegramBotClient(_options.BotToken);
     }
@@ -46,6 +48,7 @@ public class TelegramService : ITelegramService {
             new KeyboardButton[] { Buttons.Help},
             new KeyboardButton[] { Buttons.SendEMail },
             new KeyboardButton[] { Buttons.PhoneReferences },
+            new KeyboardButton[] { Buttons.GetRooms },
             new KeyboardButton[] { Buttons.GetInstructions },
             new KeyboardButton[] { Buttons.HelperContacts },
             new KeyboardButton[] { Buttons.UniversityMap },
@@ -142,6 +145,14 @@ public class TelegramService : ITelegramService {
             case Buttons.PhoneReferences: 
                 _chatStates[message.Chat.Id] = Buttons.PhoneReferences;
                 if (!await _phoneReferenceButtonHandlerService.HandleMessageAsync(botClient, message, ct))
+                    return Result.Success();
+                
+                _chatStates[message.Chat.Id] = null;
+                await SendMessageAsync(message.Chat.Id);
+                return Result.Success();
+            case Buttons.GetRooms: 
+                _chatStates[message.Chat.Id] = Buttons.GetRooms;
+                if (!await _roomButtonHandlerService.HandleMessageAsync(botClient, message, ct))
                     return Result.Success();
                 
                 _chatStates[message.Chat.Id] = null;
