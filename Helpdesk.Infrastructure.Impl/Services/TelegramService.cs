@@ -22,18 +22,20 @@ public class TelegramService : ITelegramService {
     private readonly EmailButtonHandlerService _emailButtonHandlerService;
     private readonly PhoneReferenceButtonHandlerService _phoneReferenceButtonHandlerService;
     private readonly RoomButtonHandlerService _roomButtonHandlerService;
+    private readonly InstructionButtonHandlerService _instructionButtonHandlerService;
     private readonly Dictionary<long, string?> _chatStates = new Dictionary<long, string?>();
 
     public TelegramService(
         ILogger<TelegramService> logger, 
         IOptions<TelegramOptions> options,
         EmailButtonHandlerService emailButtonHandlerService,
-        PhoneReferenceButtonHandlerService phoneReferenceButtonHandlerService, RoomButtonHandlerService roomButtonHandlerService) {
+        PhoneReferenceButtonHandlerService phoneReferenceButtonHandlerService, RoomButtonHandlerService roomButtonHandlerService, InstructionButtonHandlerService instructionButtonHandlerService) {
         
         _logger = logger;
         this._emailButtonHandlerService = emailButtonHandlerService;
         this._phoneReferenceButtonHandlerService = phoneReferenceButtonHandlerService;
         _roomButtonHandlerService = roomButtonHandlerService;
+        _instructionButtonHandlerService = instructionButtonHandlerService;
         this._options = options.Value;
         this._botClient = new TelegramBotClient(_options.BotToken);
     }
@@ -138,7 +140,6 @@ public class TelegramService : ITelegramService {
                 _chatStates[message.Chat.Id] = Buttons.SendEMail;
                 if (!await _emailButtonHandlerService.HandleMessageAsync(botClient, message, ct))
                     return Result.Success();
-                
                 _chatStates[message.Chat.Id] = null;
                 await SendMessageAsync(message.Chat.Id, "Ваше письмо отправлено! \nВыберите новую опцию:");
                 return Result.Success();
@@ -146,7 +147,6 @@ public class TelegramService : ITelegramService {
                 _chatStates[message.Chat.Id] = Buttons.PhoneReferences;
                 if (!await _phoneReferenceButtonHandlerService.HandleMessageAsync(botClient, message, ct))
                     return Result.Success();
-                
                 _chatStates[message.Chat.Id] = null;
                 await SendMessageAsync(message.Chat.Id);
                 return Result.Success();
@@ -154,11 +154,16 @@ public class TelegramService : ITelegramService {
                 _chatStates[message.Chat.Id] = Buttons.GetRooms;
                 if (!await _roomButtonHandlerService.HandleMessageAsync(botClient, message, ct))
                     return Result.Success();
-                
                 _chatStates[message.Chat.Id] = null;
                 await SendMessageAsync(message.Chat.Id);
                 return Result.Success();
-            case Buttons.GetInstructions: await GetInstructionsButtonHandler(ct); break;
+            case Buttons.GetInstructions: 
+                _chatStates[message.Chat.Id] = Buttons.GetInstructions;
+                if (!await _instructionButtonHandlerService.HandleMessageAsync(botClient, message, ct))
+                    return Result.Success();
+                _chatStates[message.Chat.Id] = null;
+                await SendMessageAsync(message.Chat.Id);
+                return Result.Success();
             case Buttons.HelperContacts: await SendMessageAsync(message.Chat.Id, ConstantStings.TechnicalSupportContacts); break;
             case Buttons.UniversityMap: await SendMessageAsync(message.Chat.Id, ConstantStings.MapLink); break;
             case Buttons.Admin: await AdminButtonHandler(ct); break;
@@ -179,10 +184,6 @@ public class TelegramService : ITelegramService {
     private Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception,
         CancellationToken cancellationToken) {
         Console.WriteLine($"Ошибка: {exception.Message}");
-        return Task.CompletedTask;
-    }
-
-    private Task GetInstructionsButtonHandler(CancellationToken ct) {
         return Task.CompletedTask;
     }
 

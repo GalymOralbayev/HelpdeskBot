@@ -14,11 +14,15 @@ public static class DependencyInjection {
         services.AddSingleton<EmailButtonHandlerService>();
         services.AddSingleton<PhoneReferenceButtonHandlerService>();
         services.AddSingleton<RoomButtonHandlerService>();
+        services.AddSingleton<InstructionButtonHandlerService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IBotUserRepository, BotUserRepository>();
         services.AddScoped<IPhoneReferenceRepository, PhoneReferenceRepository>();
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IArticleRepository, ArticleRepository>();
+        services.AddScoped<IInstructionRepository, InstructionRepository>();
+        services.AddScoped<IPhotoRepository, PhotoRepository>();
+        services.AddScoped<IStepRepository, StepRepository>();
         services.AddScoped<IEmailService, EmailService>();
         return services;
     }

@@ -9,26 +9,31 @@
     {
       "Id": "1483d497-fa6e-473c-bc5c-63f87b561ba1",
       "InstructionId": "bc69317c-9c2f-4a54-9478-7bb66ebab8c6",
+      "StepNumber" : 1,
       "StepText": "Вам необходимо перейти на страницу авторизации Microsoft (https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&rver=7.3.6963.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2fru-kz&lc=1033&id=74335&aadredir=1) нажав по указанной ссылке."
     },
     {
       "Id": "f9bca4ba-df20-4d89-8497-ff9bc1a6f017",
       "InstructionId": "bc69317c-9c2f-4a54-9478-7bb66ebab8c6",
+      "StepNumber" : 2,
       "StepText": "Вводите свой логин и пароль от корпоративной/студенческой почты Astana IT и проходите авторизацию."
     },
     {
       "Id": "8358ef15-2dcf-4412-a1b4-7793b89ef945",
       "InstructionId": "bc69317c-9c2f-4a54-9478-7bb66ebab8c6",
+      "StepNumber" : 3,
       "StepText": "Дальше вам необходимо перейти на портал нажав по ссылке https://du.astanait.edu.kz. Вам откроется страница входа в портал.\nКак показано в рисунке 2, вам необходимо нажать на ссылку “Sign in with corporate E-mail”. Далее вас перебросит на страницу входа Microsoft, где вы выбираете нужную вам корпоративную/студенческую почту."
     },
     {
       "Id": "a6dae4c9-8ba1-4302-b5a8-7d144369bc9c",
       "InstructionId": "bc69317c-9c2f-4a54-9478-7bb66ebab8c6",
+      "StepNumber" : 4,
       "StepText": "После входа в почту вас пробросит обратно на страницу нашего портала, где будет идти запрос на вход. Вам нужно будет подождать от 1 до 3 секунд и если с вашей учетной записью все в порядке, то вы перейдете в дэшборд нашего портала (рис. 3)\nПРИМЕЧАНИЕ: если при входе возникла ошибка с сообщением “Something went wrong. Please, contact administrator” или “Server Error”, то вам нужно будет обратиться с проблемой на почту support_du@astanait.edu.kz."
     },
     {
       "Id": "9648af9a-31c3-49c0-86bb-9cbc3b62002e",
       "InstructionId": "bc69317c-9c2f-4a54-9478-7bb66ebab8c6",
+      "StepNumber" : 5,
       "StepText": "С уважением, разработчики Департамента Информационных Технологий."
     }
   ],

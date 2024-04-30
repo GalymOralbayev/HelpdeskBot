@@ -53,6 +53,7 @@ public class DbInitializer {
             await PhoneReferenceInit(ct);
             await ArticleInit(ct);
             await RoomInit(ct);
+            await InstructionsInit(ct);
             
             _logger.LogInformation("Database initialization succeeded for {TotalSeconds}sec",
                 timer.Elapsed.TotalSeconds);
@@ -141,26 +142,46 @@ public class DbInitializer {
     
     private async Task InstructionsInit(CancellationToken ct) {
         try {
-            var hasRooms = await _roomRepository.Any(ct);
-            if (hasRooms) return;
+            var hasInstructions = await _dbContext.Instructions.AnyAsync(ct);
+            if (hasInstructions) return;
 
-            var path = Path.Combine("Resources", "Initializers", "i.json");
+            var path = Path.Combine("Resources", "Initializers", "instructions.json");
+            
             await using var openStream = File.OpenRead(path);
-            var rooms = await JsonSerializer.DeserializeAsync<List<InstructionInitDto>>(openStream, cancellationToken: ct);
-            if (rooms is not null) {
-                foreach (var room in rooms) {
-                    var article = await _articleRepository.GetByName(room.BlockId, ct);
-                    if (article != null) {
-                        await _roomRepository.Insert(
-                            new Room(room.RoomNumber, article, room.IpAddress, room.MacAddress), ct);
-                    }
-                }
+            var routeData = await JsonSerializer.DeserializeAsync<InstructionInitDto>(openStream, cancellationToken: ct);
+            if (routeData is not null) {
+                await _dbContext.Instructions
+                    .AddRangeAsync(routeData.Instructions.Select(x => new Instruction(x.name) {
+                        Id = x.Id
+                    }), ct);
+                await _dbContext.Steps
+                    .AddRangeAsync(routeData.Steps.Select(x => new Step(x.StepText, Guid.Parse(x.InstructionId), x.StepNumber) {
+                        Id = x.Id
+                    }), ct);
+
+                var photos = await GetPhotos(routeData.Photos, ct);
+                await _dbContext.Photos.AddRangeAsync(photos, ct);
+                await _dbContext.SaveChangesAsync(ct);
             }
         }
         catch (Exception e) {
             _logger.LogError(e, "Roles initialization error: {Message}", e.Message);
             throw;
         }
+    }
+    
+    private async Task<List<Photo>> GetPhotos(List<PhotoInit> photoInits, CancellationToken ct) {
+        var list = new List<Photo>();
+        foreach (var photoInit in photoInits) {
+            var imagesPath = Path.Combine("Resources", "Images", $"{photoInit.Id}.jpg");
+            var imageBytes = await File.ReadAllBytesAsync(imagesPath, ct);
+            
+            list.Add(new Photo(Guid.Parse(photoInit.StepId), imageBytes, "image/jpeg") {
+                Id = photoInit.Id
+            });
+        }
+
+        return list;
     }
 }
 public class PhoneReferenceInitDto {

@@ -7,7 +7,7 @@ namespace Helpdesk.DataAccess.Configurations;
 public class StepConfig : IEntityTypeConfiguration<Step> {
     public void Configure(EntityTypeBuilder<Step> builder) {
         builder.HasKey(x => x.Id);
-        builder.HasOne(x => x.Instruction);
+        builder.HasOne(x => x.Instruction).WithMany(x => x.Steps).HasForeignKey(x => x.InstructionId);
         builder.Property(x => x.StepText);
         builder.HasMany(x => x.Photos);
     }

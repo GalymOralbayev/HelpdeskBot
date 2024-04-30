@@ -1,29 +1,31 @@
+using System;
 using System.Collections.Generic;
 
 namespace Helpdesk.App.Helpers.InitDtos;
 
 public class InstructionInitDto {
-    public List<Instruction> Instructions { get; set; }
-    public List<Step> Steps { get; set; }
-    public List<Photo> Photos { get; set; }   
+    public List<InstructionInit> Instructions { get; set; }
+    public List<StepInit> Steps { get; set; }
+    public List<PhotoInit> Photos { get; set; }   
 }
 
-public class Instruction
+public class InstructionInit
 {
-    public string Id { get; set; }
+    public Guid Id { get; set; }
     public string name { get; set; }
 }
 
-public class Photo
+public class PhotoInit
 {
-    public string Id { get; set; }
+    public Guid Id { get; set; }
     public string StepId { get; set; }
 }
 
-public class Step
+public class StepInit
 {
-    public string Id { get; set; }
+    public Guid Id { get; set; }
     public string InstructionId { get; set; }
+    public int StepNumber { get; set; }
     public string StepText { get; set; }
 }
 
