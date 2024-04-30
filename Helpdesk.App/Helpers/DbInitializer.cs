@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Helpdesk.App.Helpers.InitDtos;
 using Helpdesk.Domain.Entities;
 using Helpdesk.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -122,6 +123,30 @@ public class DbInitializer {
             var path = Path.Combine("Resources", "Initializers", "rooms.json");
             await using var openStream = File.OpenRead(path);
             var rooms = await JsonSerializer.DeserializeAsync<List<RoomInitDto>>(openStream, cancellationToken: ct);
+            if (rooms is not null) {
+                foreach (var room in rooms) {
+                    var article = await _articleRepository.GetByName(room.BlockId, ct);
+                    if (article != null) {
+                        await _roomRepository.Insert(
+                            new Room(room.RoomNumber, article, room.IpAddress, room.MacAddress), ct);
+                    }
+                }
+            }
+        }
+        catch (Exception e) {
+            _logger.LogError(e, "Roles initialization error: {Message}", e.Message);
+            throw;
+        }
+    }
+    
+    private async Task InstructionsInit(CancellationToken ct) {
+        try {
+            var hasRooms = await _roomRepository.Any(ct);
+            if (hasRooms) return;
+
+            var path = Path.Combine("Resources", "Initializers", "i.json");
+            await using var openStream = File.OpenRead(path);
+            var rooms = await JsonSerializer.DeserializeAsync<List<InstructionInitDto>>(openStream, cancellationToken: ct);
             if (rooms is not null) {
                 foreach (var room in rooms) {
                     var article = await _articleRepository.GetByName(room.BlockId, ct);

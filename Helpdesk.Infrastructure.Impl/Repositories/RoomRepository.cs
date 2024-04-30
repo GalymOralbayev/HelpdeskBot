@@ -32,3 +32,29 @@ public class RoomRepository : IRoomRepository{
         return rooms;
     }
 }
+public class InstructionRepository : IInstructionRepository{
+    private readonly ApplicationContext _context;
+    private readonly IQueryable<Instruction?> _set;
+
+    public InstructionRepository(ApplicationContext dbContext) {
+        _context = dbContext;
+        _set = dbContext.Set<Instruction>();
+    }
+
+    public async Task<bool> Any(CancellationToken ct) {
+        return await _set.AnyAsync(ct);
+    }
+
+    public async Task Insert(Instruction instruction, CancellationToken ct) {
+        await _context.AddAsync(instruction, ct);
+        await _context.SaveChangesAsync(ct);
+    }
+    
+    public async Task<List<Room>> Search(Expression<Func<Room, bool>> filter, CancellationToken ct) {
+        var rooms = await _set
+            .Where(filter)
+            .Include(x => x.Article)
+            .ToListAsync(ct);
+        return rooms;
+    }
+}
