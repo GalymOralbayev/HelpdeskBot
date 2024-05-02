@@ -1,4 +1,4 @@
-using Helpdesk.Application.Services;
+using System.Text.RegularExpressions;
 using Helpdesk.Domain.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
@@ -46,7 +46,7 @@ public class PhoneReferenceButtonHandlerService {
     private async Task SearchText(ITelegramBotClient botClient, Message message, CancellationToken ct) {
         using var scope = _scopeFactory.CreateScope();
         var phoneReferenceRepository = scope.ServiceProvider.GetRequiredService<IPhoneReferenceRepository>();
-        var phones = await phoneReferenceRepository.Search(message.Text!, ct);
+        var phones = await phoneReferenceRepository.Search(CleanString(message.Text!), ct);
 
         if (phones.Any()) {
             const int batchSize = 5;
@@ -75,5 +75,14 @@ public class PhoneReferenceButtonHandlerService {
         }
 
         _phoneChatStates[message.Chat.Id] = null;
+    }
+    
+    private string CleanString(string input) {
+        if (string.IsNullOrEmpty(input))
+            return input;
+        
+        var cleaned = Regex.Replace(input, @"\s+", " ");
+    
+        return cleaned.Trim();
     }
 }

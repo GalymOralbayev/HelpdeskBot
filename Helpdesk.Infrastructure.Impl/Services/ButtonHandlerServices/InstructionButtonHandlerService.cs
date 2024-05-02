@@ -1,12 +1,14 @@
+using Helpdesk.Domain.Constants;
 using Helpdesk.Domain.Entities;
 using Helpdesk.Domain.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace Helpdesk.Infrastructure.Impl.Services.ButtonHandlerServices;
 
-public class InstructionButtonStates {
+public class InstructionButtonStates { //TODO переделать в енам, либо класс констнат состоянии чата (chatState, buttonState)
     public const string AwaitingInstructionName = "await_instruction_name";
 }
 
@@ -36,18 +38,19 @@ public class InstructionButtonHandlerService {
         var instructionRepository = scope.ServiceProvider.GetRequiredService<IInstructionRepository>();
         var instructions = await instructionRepository.GetAll(ct);
         
-        
-        var resText = instructions.Aggregate(string.Empty,
-            (current, instruction) => current + $"Инструкция: {instruction.Name} \n\n");
+        var keyboardButtons = instructions.Select(instruction => 
+            new[] { new KeyboardButton(instruction?.Name ?? "Пусто...") }
+        ).ToArray();
+
+        var replyKeyboardMarkup = new ReplyKeyboardMarkup(keyboardButtons) {
+            ResizeKeyboard = true,
+            OneTimeKeyboard = true
+        };
         
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: resText,
-            cancellationToken: ct
-        );
-        await botClient.SendTextMessageAsync(
-            chatId: message.Chat.Id,
-            text: "Введите название инструкции",
+            text: "Выберите инструкцию",
+            replyMarkup: replyKeyboardMarkup,
             cancellationToken: ct
         );
         _instructionChatStates[message.Chat.Id] = InstructionButtonStates.AwaitingInstructionName;
