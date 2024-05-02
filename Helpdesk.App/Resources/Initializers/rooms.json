@@ -1,0 +1,708 @@
+[
+	{
+		"RoomNumber" : "221",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.50",
+		"MacAddress" : "50:57:9c:c3:43:12"
+	},
+	{
+		"r_id" : 2,
+		"RoomNumber" : "223",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.175",
+		"MacAddress" : "38:9d:92:dc:ac:25"
+	},
+	{
+		"r_id" : 3,
+		"RoomNumber" : "224",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.180",
+		"MacAddress" : "50:57:9c:c3:4e:ff"
+	},
+	{
+		"r_id" : 4,
+		"RoomNumber" : "227",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.191",
+		"MacAddress" : "50:57:9c:c3:a8:33"
+	},
+	{
+		"r_id" : 5,
+		"RoomNumber" : "228",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.31",
+		"MacAddress" : "50:57:9c:c3:a8:3e"
+	},
+	{
+		"r_id" : 6,
+		"RoomNumber" : "232",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.187",
+		"MacAddress" : "50:57:9c:c3:42:c2"
+	},
+	{
+		"r_id" : 7,
+		"RoomNumber" : "233",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.1.16.3",
+		"MacAddress" : "5057.9cc3.4314"
+	},
+	{
+		"r_id" : 8,
+		"RoomNumber" : "234",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.194",
+		"MacAddress" : "50:57:9C:C3:43:3A"
+	},
+	{
+		"r_id" : 9,
+		"RoomNumber" : "238",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.190",
+		"MacAddress" : "38:9d:92:dc:ac:2e"
+	},
+	{
+		"r_id" : 10,
+		"RoomNumber" : "239",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.40",
+		"MacAddress" : "50:57:9c:c3:4e:fa"
+	},
+	{
+		"r_id" : 11,
+		"RoomNumber" : "240",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.176",
+		"MacAddress" : "50:57:9c:c3:43:35"
+	},
+	{
+		"r_id" : 12,
+		"RoomNumber" : "242",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.30",
+		"MacAddress" : "50:57:9c:c3:a6:e2"
+	},
+	{
+		"r_id" : 13,
+		"RoomNumber" : "253",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.41",
+		"MacAddress" : "38:9d:92:dc:ae:02"
+	},
+	{
+		"r_id" : 14,
+		"RoomNumber" : "254",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.254",
+		"MacAddress" : "50:57:9c:c3:43:3f"
+	},
+	{
+		"r_id" : 15,
+		"RoomNumber" : "255",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.33",
+		"MacAddress" : "50:57:9c:c3:43:34"
+	},
+	{
+		"r_id" : 16,
+		"RoomNumber" : "256",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.36",
+		"MacAddress" : "50:57:9c:c3:a7:95"
+	},
+	{
+		"r_id" : 17,
+		"RoomNumber" : "318",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.185",
+		"MacAddress" : "38:9d:92:dc:ac:28"
+	},
+	{
+		"r_id" : 18,
+		"RoomNumber" : "344",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.195",
+		"MacAddress" : "50:57:9c:c3:a7:81"
+	},
+	{
+		"r_id" : 19,
+		"RoomNumber" : "348",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.192",
+		"MacAddress" : "50:57:9c:c3:42:e2"
+	},
+	{
+		"r_id" : 20,
+		"RoomNumber" : "357",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.38",
+		"MacAddress" : "38:9d:92:dc:ac:23"
+	},
+	{
+		"r_id" : 21,
+		"RoomNumber" : "361",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.2",
+		"MacAddress" : "38:9D:92:dc:ae:03"
+	},
+	{
+		"r_id" : 22,
+		"RoomNumber" : "365",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.201",
+		"MacAddress" : "50:57:9c:c3:a7:97"
+	},
+	{
+		"r_id" : 23,
+		"RoomNumber" : "349",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.149",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 24,
+		"RoomNumber" : "241",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.241",
+		"MacAddress" : "389d.92dc.ac2a"
+	},
+	{
+		"r_id" : 25,
+		"RoomNumber" : "346",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.46",
+		"MacAddress" : "5057.9cc3.55f7"
+	},
+	{
+		"r_id" : 26,
+		"RoomNumber" : "350",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.35",
+		"MacAddress" : "5057.9cc3.a835"
+	},
+	{
+		"r_id" : 27,
+		"RoomNumber" : "226",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.226",
+		"MacAddress" : "5057.9cc3.4efb"
+	},
+	{
+		"r_id" : 28,
+		"RoomNumber" : "244",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.244",
+		"MacAddress" : "50:57:9c:c3:a7:7b"
+	},
+	{
+		"r_id" : 29,
+		"RoomNumber" : "354",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.54",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 30,
+		"RoomNumber" : "328",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.3.28",
+		"MacAddress" : "389d.92dc.aecb"
+	},
+	{
+		"r_id" : 31,
+		"RoomNumber" : "366",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.66",
+		"MacAddress" : "в работе"
+	},
+	{
+		"r_id" : 32,
+		"RoomNumber" : "225",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.250",
+		"MacAddress" : "5057.9cc3.4efc"
+	},
+	{
+		"r_id" : 33,
+		"RoomNumber" : "324",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.3.24",
+		"MacAddress" : "5057.9cc3.4310"
+	},
+	{
+		"r_id" : 34,
+		"RoomNumber" : "245",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.163",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 35,
+		"RoomNumber" : "353",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.0.53",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 36,
+		"RoomNumber" : "226",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.226",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 37,
+		"RoomNumber" : "251",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.250.1.251",
+		"MacAddress" : "50579c66ad0f"
+	},
+	{
+		"r_id" : 38,
+		"RoomNumber" : "235",
+		"BlockId" : "Блок C1",
+		"IpAddress" : "10.1.16.4",
+		"MacAddress" : "50:57:9c:c3:43:4a"
+	},
+	{
+		"r_id" : 39,
+		"RoomNumber" : "221",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.173",
+		"MacAddress" : "50:57:9c:c3:a8:3d"
+	},
+	{
+		"r_id" : 40,
+		"RoomNumber" : "228",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.39",
+		"MacAddress" : "38:9d:92:dc:ae:ff"
+	},
+	{
+		"r_id" : 41,
+		"RoomNumber" : "239",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.254",
+		"MacAddress" : "3b:9d:92:dc:ad:fa"
+	},
+	{
+		"r_id" : 42,
+		"RoomNumber" : "232",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.189",
+		"MacAddress" : "50:57:9c:c3:92:da"
+	},
+	{
+		"r_id" : 43,
+		"RoomNumber" : "240",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.193",
+		"MacAddress" : "50:57:9c:c3:a7:db"
+	},
+	{
+		"r_id" : 44,
+		"RoomNumber" : "241",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.44",
+		"MacAddress" : "50:57:9c:c3:43:2f"
+	},
+	{
+		"r_id" : 45,
+		"RoomNumber" : "242",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.188",
+		"MacAddress" : "50:57:9c:c3:42:ca"
+	},
+	{
+		"r_id" : 46,
+		"RoomNumber" : "243",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.197",
+		"MacAddress" : "50:57:9c:c3:a8:34"
+	},
+	{
+		"r_id" : 47,
+		"RoomNumber" : "248",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.196",
+		"MacAddress" : "50:57:9c:c3:a8:39"
+	},
+	{
+		"r_id" : 48,
+		"RoomNumber" : "249",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.165",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 49,
+		"RoomNumber" : "251",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.253",
+		"MacAddress" : "38:9d:92:dc:ad:fa"
+	},
+	{
+		"r_id" : 50,
+		"RoomNumber" : "cisco кабинет(124)",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.186",
+		"MacAddress" : "50:57:9c:c3:4e:c8"
+	},
+	{
+		"r_id" : 51,
+		"RoomNumber" : "Huawei кабинет (123)",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.35",
+		"MacAddress" : "50:57:9c:c3:a7:a2"
+	},
+	{
+		"r_id" : 52,
+		"RoomNumber" : "122",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.199",
+		"MacAddress" : "50:57:9c:c3:a8:03"
+	},
+	{
+		"r_id" : 53,
+		"RoomNumber" : "138",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "HDMI",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 54,
+		"RoomNumber" : "231",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.2.231",
+		"MacAddress" : "50:57:9c:c3:43:51"
+	},
+	{
+		"r_id" : 55,
+		"RoomNumber" : "225",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.2.225",
+		"MacAddress" : "50:57:9c:c3:a7:d9"
+	},
+	{
+		"r_id" : 56,
+		"RoomNumber" : "226",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.2.226",
+		"MacAddress" : "50:57:9c:c3:42:ba"
+	},
+	{
+		"r_id" : 57,
+		"RoomNumber" : "229",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.2.229",
+		"MacAddress" : "5057.9cc3.4354"
+	},
+	{
+		"r_id" : 58,
+		"RoomNumber" : "233",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.200",
+		"MacAddress" : "50:57:9c:d9:ab:a8"
+	},
+	{
+		"r_id" : 59,
+		"RoomNumber" : "222",
+		"BlockId" : "Блок C2",
+		"IpAddress" : "10.250.0.122",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 60,
+		"RoomNumber" : "247",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.126",
+		"MacAddress" : "38:1a:52:b6:11:10"
+	},
+	{
+		"r_id" : 61,
+		"RoomNumber" : "246",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.127",
+		"MacAddress" : "38:1a:52:b5:19:62"
+	},
+	{
+		"r_id" : 62,
+		"RoomNumber" : "244",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.128",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 63,
+		"RoomNumber" : "243",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.129",
+		"MacAddress" : "38:1a:52:b6:12:74"
+	},
+	{
+		"r_id" : 64,
+		"RoomNumber" : "241",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.130",
+		"MacAddress" : "38:1a:52:b6:11:0f"
+	},
+	{
+		"r_id" : 65,
+		"RoomNumber" : "240",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.131",
+		"MacAddress" : "38:1a:52:b6:10:ee"
+	},
+	{
+		"r_id" : 66,
+		"RoomNumber" : "237",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.132",
+		"MacAddress" : "38:1a:52:b6:10:b6"
+	},
+	{
+		"r_id" : 67,
+		"RoomNumber" : "236",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.133",
+		"MacAddress" : "38:1a:52:b6:13:b1"
+	},
+	{
+		"r_id" : 68,
+		"RoomNumber" : "222",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.134",
+		"MacAddress" : "38:1a:52:b6:12:59"
+	},
+	{
+		"r_id" : 69,
+		"RoomNumber" : "223",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.135",
+		"MacAddress" : "38:1a:52:b5:19:55"
+	},
+	{
+		"r_id" : 70,
+		"RoomNumber" : "224",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.100",
+		"MacAddress" : "38:1a:52:b5:1a:a4"
+	},
+	{
+		"r_id" : 71,
+		"RoomNumber" : "225",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.101",
+		"MacAddress" : "38:1a:52:b5:18:07"
+	},
+	{
+		"r_id" : 72,
+		"RoomNumber" : "226",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.102",
+		"MacAddress" : "38:1a:52:b5:1a:8c"
+	},
+	{
+		"r_id" : 73,
+		"RoomNumber" : "227",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.103",
+		"MacAddress" : "381a.52b5.1b0d"
+	},
+	{
+		"r_id" : 74,
+		"RoomNumber" : "228",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.104",
+		"MacAddress" : "38:1a:52:b6:11:27"
+	},
+	{
+		"r_id" : 75,
+		"RoomNumber" : "229",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.105",
+		"MacAddress" : "38:1a:52:b5:17:fd"
+	},
+	{
+		"r_id" : 76,
+		"RoomNumber" : "230",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.106",
+		"MacAddress" : "38:1a:52:b6:13:bb"
+	},
+	{
+		"r_id" : 77,
+		"RoomNumber" : "231",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.107",
+		"MacAddress" : "38:1a:52:b5:1a:8b"
+	},
+	{
+		"r_id" : 78,
+		"RoomNumber" : "232",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.108",
+		"MacAddress" : "38:1a:52:b5:1a:8e"
+	},
+	{
+		"r_id" : 79,
+		"RoomNumber" : "233",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.109",
+		"MacAddress" : "38:1a:52:b5:1a:8d"
+	},
+	{
+		"r_id" : 80,
+		"RoomNumber" : "248",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.110",
+		"MacAddress" : "38:1a:52:b5:1a:91"
+	},
+	{
+		"r_id" : 81,
+		"RoomNumber" : "234",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.111",
+		"MacAddress" : "38:1a:52:b6:11:29"
+	},
+	{
+		"r_id" : 82,
+		"RoomNumber" : "254",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.112",
+		"MacAddress" : "38:1a:52:b5:1a:8f"
+	},
+	{
+		"r_id" : 83,
+		"RoomNumber" : "255",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.113",
+		"MacAddress" : "38:1a:52:b6:10:7e"
+	},
+	{
+		"r_id" : 84,
+		"RoomNumber" : "262",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.114",
+		"MacAddress" : "38:1a:52:b6:11:2d"
+	},
+	{
+		"r_id" : 85,
+		"RoomNumber" : "263",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.115",
+		"MacAddress" : "38:1a:52:b5:19:6b"
+	},
+	{
+		"r_id" : 86,
+		"RoomNumber" : "266",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.116",
+		"MacAddress" : "38:1a:52:b5:19:5c"
+	},
+	{
+		"r_id" : 87,
+		"RoomNumber" : "267",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.117",
+		"MacAddress" : "38:1a:52:b5:1b:08"
+	},
+	{
+		"r_id" : 88,
+		"RoomNumber" : "319",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.118",
+		"MacAddress" : "38:1a:52:b5:19:78"
+	},
+	{
+		"r_id" : 89,
+		"RoomNumber" : "322",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.119",
+		"MacAddress" : "38:1a:52:b6:12:78"
+	},
+	{
+		"r_id" : 90,
+		"RoomNumber" : "318",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.120",
+		"MacAddress" : "38:1a:52:b6:12:55"
+	},
+	{
+		"r_id" : 91,
+		"RoomNumber" : "321",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.0.121",
+		"MacAddress" : "E0:BB:9E:94:6B:FA"
+	},
+	{
+		"r_id" : 92,
+		"RoomNumber" : "362",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.124",
+		"MacAddress" : "1aba"
+	},
+	{
+		"r_id" : 93,
+		"RoomNumber" : "235",
+		"BlockId" : "Блок C3",
+		"IpAddress" : "10.250.1.123",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 94,
+		"RoomNumber" : "1",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.182",
+		"MacAddress" : ""
+	},
+	{
+		"r_id" : 95,
+		"RoomNumber" : "2",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.109",
+		"MacAddress" : "A4:D7:3C:7E:F3:77"
+	},
+	{
+		"r_id" : 96,
+		"RoomNumber" : "3",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.117",
+		"MacAddress" : "A4:D7:3C:7F:48:EB"
+	},
+	{
+		"r_id" : 97,
+		"RoomNumber" : "4",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.106",
+		"MacAddress" : "A4:D7:3C:7F:45:B2"
+	},
+	{
+		"r_id" : 98,
+		"RoomNumber" : "5",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.125",
+		"MacAddress" : "A4:D7:3C:7E:F2:D5"
+	},
+	{
+		"r_id" : 99,
+		"RoomNumber" : "6",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.159",
+		"MacAddress" : "A4:D7:3C:7F:7D:0D"
+	},
+	{
+		"r_id" : 100,
+		"RoomNumber" : "7",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.162",
+		"MacAddress" : "A4:D7:3C:7F:7D:4E"
+	},
+	{
+		"r_id" : 101,
+		"RoomNumber" : "8",
+		"BlockId" : "EXPONEWBLOCK",
+		"IpAddress" : "10.250.0.165",
+		"MacAddress" : "A4:D7:3C:7F:7D:17"
+	}
+]
